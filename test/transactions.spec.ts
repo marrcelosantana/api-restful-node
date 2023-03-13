@@ -27,13 +27,14 @@ describe("Transactions routes", () => {
   });
 
   test("user can create a new transaction", async () => {
-    const response = await request(app.server).post("/transactions").send({
-      title: "New transaction",
-      amount: 5000,
-      type: "credit",
-    });
-
-    expect(response.statusCode).toEqual(201);
+    await request(app.server)
+      .post("/transactions")
+      .send({
+        title: "New transaction",
+        amount: 5000,
+        type: "credit",
+      })
+      .expect(201);
   });
 
   test("user can list all transactions", async () => {
