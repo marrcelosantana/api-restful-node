@@ -23,7 +23,7 @@
 # Clone este repositório
 $ git clone https://github.com/marrcelosantana/api-restful-node
 # Acesse a pasta do projeto
-$ cd market-space-app
+$ cd api-restful-node
 # Instale as dependências
 $ npm install
 # ou
